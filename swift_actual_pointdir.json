@@ -1,0 +1,18 @@
+{"namespace": "gcn.notices",
+ "type": "record",
+ "name": "SWIFT_ACTUALPNTDIR",
+ "fields": [
+     {"name": "TITLE",         "type": "string",          "default": "GCN/SWIFT NOTICE"},
+     {"name": "NOTICE_DATE",   "type": "string",          "doc":     "date and time of notice creation"},
+     {"name": "NOTICE_TYPE",   "type": "string",          "default": "SWIFT Actual Pointing Direction"},
+     {"name": "SRC_RA",        "type": "double",          "doc":     "RA of the spacecraft after the slew in J2000 epoch [deg]"},
+     {"name": "SRC_DEC",       "type": "double",          "doc":     "Dec of the spacecraft after the slew in J2000 epoch [deg]"},
+     {"name": "ROLL",          "type": "float",           "doc":     "Roll of the spacecraft after the slew [deg]"},
+     {"name": "SLEW_TIME",     "type": "float",           "doc":     "SOD when the next s/c slew ends"},
+     {"name": "SLEW_DATE",     "type": "int",             "doc":     "TJD when the next s/c slew ends"},
+     {"name": "TGT_NUM",       "type": "string",          "doc":     "string of alpha and digits uniquely identifying event"},  
+     {"name": "SEG_NUM",       "type": "long",            "doc":     "Swift serial number (for Swift notice types only)" },
+     {"name": "MISC_19",       "type": "bytes",           "doc":     "32 Flag Bits. See https://gcn.gsfc.nasa.gov/sock_pkt_def_doc.html for definition of bits, some bits may not be defined"},
+     {"name": "COMMENTS",      "type": "array",           "items" : "string", "default": []}
+  ]
+}

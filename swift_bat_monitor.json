@@ -1,0 +1,25 @@
+{"namespace": "gcn.notices",
+ "type": "record",
+ "name": "SWIFT_BAT_MONITOR",
+ "fields": [
+     {"name": "TITLE",         "type": "string",   "default": "GCN/SWIFT NOTICE"},
+     {"name": "NOTICE_DATE",   "type": "string",   "doc":     "date and time of notice creation"},
+     {"name": "NOTICE_TYPE",   "type": "string",   "default": "Swift-BAT Monitor Alert"},
+     {"name": "SOURCE_OBJ",    "type": "string",   "doc":     "name of the object that is undergoing the transient outburst"},  
+     {"name": "REF_NUM",       "type": "string",   "doc":     "string of alpha and digits uniquely identifying event"},  
+     {"name": "SRC_RA",        "type": "double",   "doc":     "RA of the source object undergoing the transient outburst in J2000 epoch [deg]"},
+     {"name": "SRC_DEC",       "type": "double",   "doc":     "Dec of the source object undergoing the transient outburst in J2000 epoch [deg]"},
+     {"name": "CRAB_FLUX",     "type": "float",    "doc":     "current intensity of the source object in mCrab units [mCrab]"},
+     {"name": "CURR_FLUX",     "type": "float",    "doc":     "current intensity of the source [cnts/cm2/sec]"},
+     {"name": "BASELINE_FLUX", "type": "float",    "doc":     "baseline intensity of the source before the transient outburst occurred [cnts/cm2/sec]"},
+     {"name": "SIGNIF",        "type": "float",    "doc":     "significance of the increase of the source outburst [sigma]"},
+     {"name": "OUTBURST_DATE", "type": "int",      "doc":     "date of GRB/Transient [TJD]"},
+     {"name": "OUTBURST_TIME", "type": "float",    "doc":     "time of GRB/Transient [SOD]"},
+     {"name": "SAMPLING",      "type": "string",   "doc":     "Sampling index (0=Orbital, 1=Daily)"},
+     {"name": "SRC_TYPE",      "type": "string",   "doc":     "0=test_blank_sky/undefined, 1=unknown_src, 2=known_src, 3=provisional_src"},
+     {"name": "SOLN_STATUS",   "type": "bytes",    "doc":     "32 Flag Bits. See https://gcn.gsfc.nasa.gov/sock_pkt_def_doc.html for definition of misc[18] bits, some bits may not be defined"},
+     {"name": "MISC_2",        "type": "bytes",    "doc":     "32 Flag Bits. See https://gcn.gsfc.nasa.gov/sock_pkt_def_doc.html for definition of misc[19] bits, some bits may not be defined"},
+     {"name": "LC_URL",        "type": "string",   "doc":     "full URL of the Lightcurve"},
+     {"name": "COMMENTS",      "type": "array",    "items":   "string", "default": []}
+  ]
+}

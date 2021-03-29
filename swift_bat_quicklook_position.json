@@ -1,0 +1,22 @@
+{"namespace": "gcn.notices",
+ "type": "record",
+ "name": "SWIFT_BAT_QUICKLOOK_POSITION",
+ "fields": [
+     {"name": "TITLE",         "type": "string",    "default": "GCN/SWIFT NOTICE"},
+     {"name": "NOTICE_DATE",   "type": "string",    "doc":     "date and time of notice creation"},
+     {"name": "NOTICE_TYPE",   "type": "string",    "default": "Swift-BAT Quick-Look Position"},
+     {"name": "TRIGGER_NUM",   "type": "string",    "doc":     "string of alpha and digits uniquely identifying event"},  
+     {"name": "SEG_NUM",       "type": "long",      "doc":     "Swift serial number (for Swift notice types only)"},
+     {"name": "SRC_RA",        "type": "double",    "doc":     "RA of GRB/Transient in J2000 epoch [deg]"},
+     {"name": "SRC_DEC",       "type": "double",    "doc":     "Dec of GRB/Transient in J2000 epoch [deg]"},
+     {"name": "GRB_ERROR",     "type": "float",     "doc":     "[arcmin radius, statistical only]"},
+     {"name": "GRB_DATE",      "type": "int",       "doc":     "date of GRB/Transient [TJD]"},
+     {"name": "GRB_TIME",      "type": "float",     "doc":     "time of GRB/Transient [SOD]"},
+     {"name": "RATE_SIGNIF",   "type": "float",     "doc":     "strength of rate domain at time of trigger [sigma]"},
+     {"name": "SOLN_STATUS",   "type": "bytes",     "doc":     "flag bits  See https://gcn.gsfc.nasa.gov/sock_pkt_def_doc.html for definition of bits, some bits may not be defined"},
+     {"name": "FLAGS",         "type": "bytes",     "doc":     "AT Slew Flag Bits. See https://gcn.gsfc.nasa.gov/sock_pkt_def_doc.html for definition of bits, some bits may not be defined"},
+     {"name": "MERIT",         "type": "float",     "doc":     "weighting factors for the 10 paramters in the trigger criteria"},
+     {"name": "MISC_19",       "type": "bytes",     "doc":     "32 Flag Bits. See https://gcn.gsfc.nasa.gov/sock_pkt_def_doc.html for definition of bits, some bits may not be defined"},
+     {"name": "COMMENTS",      "type": "array",     "items":   "string", "default": []}
+  ]
+}
